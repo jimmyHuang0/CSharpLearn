@@ -379,7 +379,7 @@ object类
 	获取类: 
 		Type testType = assemly.GetType("Ruanmou.DB.SqlServer.ReflectionTest");
 	创建实例：
-		object obj=Activator.creatInstnce(testType);
+		object obj=Activator.CreateInstance(testType);
 	方法调用：
 		获取实例的方法：MethodInfo method = instance.getMethod("methodName");
 		调用重载的私有方法：
