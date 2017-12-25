@@ -31,7 +31,52 @@ automapper
 
 多线程设计模式
 
+IQueryable
+
 ----------------------------------------------------- doing --------------------------------------------------------------
+
+
+迭代器：
+	--迭代器返回一个IIterator，里面包含三个成员：current、moveNext、Reset
+	--foreach调用的时候，是返回一个迭代器。相当于while循环家moveNext，退出的时候reset
+	--统一了不同集合的同样的访问方式
+	--只要实现 IEumerator GerEnumrator()方法，就可以使用foreach
+	--yield延时加载，按需获取，可以避免一次获取全部结果
+
+	
+
+
+
+
+
+数据结构接口：
+	--IEnumerable：可以迭代访问，linq的基础，用yield，延迟查询
+	--IList: 可以索引访问
+	--ICollection：表示是一个集合
+	--IQueryable：可生成表达式树
+
+
+数据结构：
+	arrayList:
+		--可以保存不同类型的队列
+		--这里会进行装箱，把所有类型都变味object进行保存
+	List:
+		--是一个数组
+		--连续内存
+		--查询速度快，可通过下标索引
+		--内存不够的时候，增加可能需要移动一块内存，这里会耗时
+	LinkedList：
+		--链表
+		--插入删除效率高
+	Queue:
+		--队列，也是一个链表		
+	Stack：
+		--栈
+	Dictionary：
+		--泛型的hashtable
+		--线程安全的用：concurrentDictionary
+		--空间换时间
+
 
 
 
