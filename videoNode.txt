@@ -43,6 +43,33 @@ IQueryable
 ----------------------------------------------------- done --------------------------------------------------------------
 
 
+CLR:common language runtime
+	--线程堆栈
+		--栈 stack：
+			--栈的速度比堆快，因为在堆上需要通过栈在找到堆
+			--定义的对象的指针在栈上
+		--堆 heap：
+			--对象指针指向的实际内容在堆上
+		--类在堆栈的位置
+			--类中的方法中的局部变量在栈上，因为方法的局部变量不依托于某个实例的类
+			--类中的属性在堆上，因为属性依托于某个new的对象
+		--结构在栈上
+		--值类型
+			--作为局部变量在栈上
+			--作为字段在堆上
+
+
+struct:
+	--结构隐式继承System.ValueType
+	--在结构中，不能有父类
+
+
+CTS: common types System
+	--命名规范
+
+CLS:
+	--.net中各种语言共同的部分
+
 垃圾回收：
 	--栈不需要GC，栈的内存随作用域的离开而消亡
 	--手动GC：GC.Collect()
@@ -116,8 +143,31 @@ AOP面向切面编程：
 			--代理模式、装饰器模式（包一层）
 		--动态代理
 			--特性和反射
+			--远程代理：
+				--.net框架支持
+				--RealProxy
+				--必须父类MarshalByRefObject，C#中只能继承一个父类
+			--Castle.Core 远程代理
+				--一个第三方库
+				--业务逻辑要使用virtual关键字
+				--使用emit实现的
+			--Unity
+				--可以通过在接口上增加属性，实现接口中所有方法的AOP
+					e.g:
+						IUnityContainer container = new UnityContainer();//声明一个容器
+		                container.RegisterType<IUserProcessor, UserProcessor>();//声明UnityContainer并注册IUserProcessor
+		                container.AddNewExtension<Interception>().Configure<Interception>()
+		                    .SetInterceptorFor<IUserProcessor>(new InterfaceInterceptor());
+
+		                IUserProcessor userprocessor = container.Resolve<IUserProcessor>();
+		                Console.WriteLine("********************");
+		                userprocessor.RegUser(user);//调用
+		                userprocessor.GetUser(user);//调用
+				--TransparentProxyInterceptor：直接在类的方法上进行标记，但是这个类必须继承MarshalByRefObject...不建议用
+         		--VirtualMethod：直接在类的方法上进行标记，但这个方法必须是虚方法（就是方法要带virtual关键字）
+         		--InterfaceInterceptor：在接口的方法上进行标记，这样继承这个接口的类里实现这个接口方法的方法就能被拦截
 		--静态注入
-		--Unity、MVC
+		--MVC：反射+统一入口
 
 
 12306与分布式异步队列：
