@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "threadPraticeDemo", "threadPraticeDemo\threadPraticeDemo.csproj", "{6283AC35-C1F9-4BBF-AE63-31DFA976931B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteryBall", "LotteryBall\LotteryBall.csproj", "{AF629B8C-2FA5-424A-9460-66AC635558D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6283AC35-C1F9-4BBF-AE63-31DFA976931B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6283AC35-C1F9-4BBF-AE63-31DFA976931B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6283AC35-C1F9-4BBF-AE63-31DFA976931B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6283AC35-C1F9-4BBF-AE63-31DFA976931B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF629B8C-2FA5-424A-9460-66AC635558D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF629B8C-2FA5-424A-9460-66AC635558D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF629B8C-2FA5-424A-9460-66AC635558D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF629B8C-2FA5-424A-9460-66AC635558D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FC5A8D8-3ADA-4DCC-A5B4-DE84383FF1C2}
+	EndGlobalSection
+EndGlobal

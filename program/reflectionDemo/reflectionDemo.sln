@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reflectionDemo", "reflectionDemo\reflectionDemo.csproj", "{7751035B-8500-40B2-853F-F7F43F4FC867}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classDll", "classDll\classDll.csproj", "{03972033-0D93-4000-99F7-7C14D9B6603F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDBHelper", "IHelper\IDBHelper.csproj", "{7745B903-6047-417D-9FF1-050E6B825E6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7751035B-8500-40B2-853F-F7F43F4FC867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7751035B-8500-40B2-853F-F7F43F4FC867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7751035B-8500-40B2-853F-F7F43F4FC867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7751035B-8500-40B2-853F-F7F43F4FC867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03972033-0D93-4000-99F7-7C14D9B6603F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03972033-0D93-4000-99F7-7C14D9B6603F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03972033-0D93-4000-99F7-7C14D9B6603F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03972033-0D93-4000-99F7-7C14D9B6603F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7745B903-6047-417D-9FF1-050E6B825E6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7745B903-6047-417D-9FF1-050E6B825E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7745B903-6047-417D-9FF1-050E6B825E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7745B903-6047-417D-9FF1-050E6B825E6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEB636FB-F497-44BC-8E1B-6D6E1FD14558}
+	EndGlobalSection
+EndGlobal
