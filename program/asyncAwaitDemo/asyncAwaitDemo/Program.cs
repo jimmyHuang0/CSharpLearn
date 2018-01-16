@@ -35,9 +35,8 @@ namespace asyncAwaitDemo
         {
             Console.WriteLine("开始执行主函数");         //-->1
 
-            var v = funT();
-
-            Thread.Sleep(100);
+            var v = funT();                              
+            Thread.Sleep(100);                           
             Console.WriteLine("主函数执行点其他的");     //-->3
 
             Console.WriteLine(v.Result);                 //-->4

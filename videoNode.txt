@@ -42,7 +42,17 @@ IQueryable
 
 
 ----------------------------------------------------- done --------------------------------------------------------------
+Task与async混合：
+	--task.wait会导致阻塞
+	--await和wait混用死锁
+		--用async，在进行await的时候，会有一个上下文切换。如果在控制台程序，切换回使用线程池。而在GUI程序，切换会使用GUI线程。如果，某Task使用await，而另外的一个地方使用此task的wait方法。将导致死锁。原因，就是使用task.wait()会获取GUI线程的上下文，而await结束后，会查询此上下文。而GUI线程，只允许一个程序块(还是线程？)进入获取上下文。从而导致死锁。
+		--解决方法，在await方法加入ConfigureAwait(false)，false表示请外从线程池获取上下文，如果是true就是根据原来的上下文去获取。如：
+		await Task.Delay(4500).ConfigureAwait(false)
 
+
+
+获取带毫秒数的系统时间：
+	DateTime.Now.TimeOfDay.ToString()
 
 DB数据库设计二：
 	--权限设计
