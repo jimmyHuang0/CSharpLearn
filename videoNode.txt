@@ -157,6 +157,11 @@ Cache:
 	--增加：标准接口
 
 
+Linq:
+
+
+
+
 sealed:
 	应用于某个类时，sealed修饰符可阻止其他类继承自该类。
 
@@ -768,7 +773,7 @@ Linq to object：
 			var v1 = from a in new List<int> { 1, 2, 6, 9, 56 }
 					 where a > 5
 					 select a;
-
+	--
 
 
 
