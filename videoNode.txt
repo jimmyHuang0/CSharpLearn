@@ -37,6 +37,47 @@ DTO???
 
 
 ----------------------------------------------------- done --------------------------------------------------------------
+接口的显示与隐式：
+	--显示实现：
+		--在class中，直接interface.Method()
+		--注意，不能接口实现的方法或者属性前面，不能有任何修饰符(public,private,protected)
+		--外部，必须使用接口来调用，也就是：
+			interface a=new class();
+			a.method();
+	--隐式实现：
+		--定义：interface有方法method,class中使用public修饰method，并且不标明interface
+		--在使用的时候，左边可以用类，因为是public
+	--显示实现的用途：
+		--如果有两个接口，有同样的名字，就可以分开来实现
+		--强制用户面向接口编程
+
+
+
+
+数组定义：
+	--在一个类中可以先声明数组，不用定义其长度。
+		然后在实例的时候，通过new，或者赋值的方式，进行定义
+	--例：
+		   class Program
+		    {
+		        static void Main(string[] args)
+		        {
+		            A a = new A() { i=new int[2]};
+		            a.i[1] = 1;
+
+		            int[] aa={ 1,2,3,4};
+		            A a1 = new A() { i = aa };
+		            a1.i[3] = 2;//aa也会改变，因为给的是一个数组的指针，并没有复制
+
+		            Console.ReadLine();
+		        }
+		    }
+
+		    class A
+		    {
+		        public int[] i;
+		    }
+
 
 
 IOC：
